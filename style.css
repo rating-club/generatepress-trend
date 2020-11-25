@@ -1,0 +1,58 @@
+/*
+ Theme Name:   GeneratePress Trend
+ Theme URI:    https://generatepress.com
+ Description:  Default GeneratePress child theme
+ Author:       Tom Usborne
+ Author URI:   https://tomusborne.com
+ Template:     generatepress
+ Version:      0.1
+*/
+
+/* Widgets */
+.widget-gdssh_networks_profiles .widget-title {
+    text-align: center;
+}
+/* Widgets */
+
+/* Breadcrumbs Styling */
+.gdcub-generatepress-wrapper {
+    background: #FFF;
+}
+/* Breadcrumbs Styling */
+
+/* Archive Articles Styling */
+body.post-type-archive-product article .inside-article {
+    overflow: auto;
+}
+
+body.post-type-archive-product article .trend-rating {
+    float: left;
+}
+
+body.post-type-archive-product article .post-image {
+    float: left;
+    margin: 15px 15px 0;
+    text-align: left;
+}
+
+body.post-type-archive-product article .post-image img {
+    max-height: 104px;
+    width: auto;
+}
+
+body.post-type-archive-product article .entry-summary {
+    margin: 10px 0 0;
+    font-size: .9em;
+}
+
+body.post-type-archive-product article footer.entry-meta {
+    margin-top: 5px;
+}
+/* Archive Articles Styling */
+
+/* Additional Widgets Styling */
+.gdrts-rating-list ol li.gdrts-rating-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #dedede;
+}
