@@ -45,6 +45,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		?>
 
+        <?php gdrts__display_thumbs_rating_block(); ?>
+
         <div class="entry-content"<?php echo $itemprop; // phpcs:ignore -- No escaping needed. ?>>
 			<?php
 			the_content();
