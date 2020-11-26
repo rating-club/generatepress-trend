@@ -14,6 +14,14 @@
 }
 /* Widgets */
 
+/* Additional Widgets Styling */
+.gdrts-rating-list ol li.gdrts-rating-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #dedede;
+}
+/* Additional Widgets Styling */
+
 /* Breadcrumbs Styling */
 .gdcub-generatepress-wrapper {
     background: #FFF;
@@ -59,10 +67,3 @@ body.post-type-archive-product article footer.entry-meta {
     margin-top: 5px;
 }
 /* Archive Products Styling */
-
-/* Additional Widgets Styling */
-.gdrts-rating-list ol li.gdrts-rating-item {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #dedede;
-}
