@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> <?php generate_do_microdata( 'article' ); ?>>
-	<div class="inside-article">
+    <div class="inside-article">
 		<?php
 
 		do_action( 'generate_before_content' );
 
 		if ( generate_show_entry_header() ) :
 			?>
-			<header class="entry-header">
+            <header class="entry-header">
 				<?php
 
 				do_action( 'generate_before_entry_title' );
@@ -31,8 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				do_action( 'generate_after_entry_title' );
 
 				?>
-			</header>
-			<?php
+            </header>
+		<?php
 
 		endif;
 
@@ -47,11 +47,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		if ( generate_show_excerpt() ) :
 			?>
 
-			<div class="entry-summary"<?php echo $itemprop; // phpcs:ignore -- No escaping needed. ?>>
+            <div class="entry-summary"<?php echo $itemprop; // phpcs:ignore -- No escaping needed.
+			?>>
 				<?php the_excerpt(); ?>
-			</div>
+            </div>
 
-			<?php
+		<?php
 		endif;
 
 		do_action( 'generate_after_entry_content' );
@@ -59,5 +60,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'generate_after_content' );
 
 		?>
-	</div>
+    </div>
 </article>

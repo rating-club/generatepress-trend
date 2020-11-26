@@ -46,7 +46,7 @@ do_action( 'generate_before_comments' );
 			'generate_comment_form_title',
 			sprintf(
 				esc_html(
-					/* translators: 1: number of comments, 2: post title */
+				/* translators: 1: number of comments, 2: post title */
 					_nx(
 						'%1$s thought on &ldquo;%2$s&rdquo;',
 						'%1$s thoughts on &ldquo;%2$s&rdquo;',
@@ -80,24 +80,24 @@ do_action( 'generate_before_comments' );
 
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 			?>
-			<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'generatepress' ); ?></h2>
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'generatepress' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'generatepress' ) ); ?></div>
-			</nav><!-- #comment-nav-above -->
+            <nav id="comment-nav-above" class="comment-navigation" role="navigation">
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'generatepress' ); ?></h2>
+                <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'generatepress' ) ); ?></div>
+                <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'generatepress' ) ); ?></div>
+            </nav><!-- #comment-nav-above -->
 		<?php endif; ?>
 
-		<ol class="comment-list">
+        <ol class="comment-list">
 			<?php
 
-            /* Custom query to get comments ordered by the Thumbs Rating */
-			$_query = new WP_Comment_Query;
-			$comments = $_query->query(array(
-				'post_id' => get_the_ID(),
-				'orderby' => 'gdrts',
-				'order' => 'DESC',
+			/* Custom query to get comments ordered by the Thumbs Rating */
+			$_query   = new WP_Comment_Query();
+			$comments = $_query->query( array(
+				'post_id'      => get_the_ID(),
+				'orderby'      => 'gdrts',
+				'order'        => 'DESC',
 				'gdrts_method' => 'thumbs-rating'
-			));
+			) );
 
 			wp_list_comments(
 				array(
@@ -106,17 +106,17 @@ do_action( 'generate_before_comments' );
 			);
 
 			?>
-		</ol><!-- .comment-list -->
+        </ol><!-- .comment-list -->
 
 		<?php
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 			?>
-			<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'generatepress' ); ?></h2>
-				<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'generatepress' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'generatepress' ) ); ?></div>
-			</nav><!-- #comment-nav-below -->
-			<?php
+            <nav id="comment-nav-below" class="comment-navigation" role="navigation">
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'generatepress' ); ?></h2>
+                <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'generatepress' ) ); ?></div>
+                <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'generatepress' ) ); ?></div>
+            </nav><!-- #comment-nav-below -->
+		<?php
 		endif;
 
 	endif;
@@ -124,8 +124,8 @@ do_action( 'generate_before_comments' );
 	// phpcs:ignore WordPress.PHP.StrictComparisons.LooseComparison
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'generatepress' ); ?></p>
-		<?php
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'generatepress' ); ?></p>
+	<?php
 	endif;
 
 	comment_form();

@@ -1,8 +1,8 @@
 <?php
 
 /** GeneratePress:
-  * Alternative version of the function to load templates.
-  */
+ * Alternative version of the function to load templates.
+ */
 function gdrts__generate_do_template_part( $template, $post_type ) {
 	do_action( 'generate_before_do_template_part', $template, $post_type );
 
@@ -20,23 +20,23 @@ function gdrts__generate_do_template_part( $template, $post_type ) {
 }
 
 /** GD Rating System Pro:
-  * Display the thumbs rating block with few customizations
-  */
+ * Display the thumbs rating block with few customizations
+ */
 function gdrts__display_thumbs_rating_block() {
 	echo '<div class="trend-rating">';
 
 	gdrts_posts_render_rating(
 		array(
-			'echo' => true,
+			'echo'   => true,
 			'method' => 'thumbs-rating'
 		),
 		array(
-			'style_size' => 40,
+			'style_size'  => 40,
 			'style_theme' => 'trend',
-			'template' => 'trend',
+			'template'    => 'trend',
 			'style_class' => '',
-			'style_type' => 'gdrts-trend',
-			'style_name' => 'arrows'
+			'style_type'  => 'gdrts-trend',
+			'style_name'  => 'arrows'
 		)
 	);
 
@@ -44,9 +44,9 @@ function gdrts__display_thumbs_rating_block() {
 }
 
 /** GeneratePress:
-  * Enable entry meta block for 'product' post type.
-  */
-add_filter('generate_entry_meta_post_types', 'gdrts__generate_entry_meta_post_types' );
+ * Enable entry meta block for 'product' post type.
+ */
+add_filter( 'generate_entry_meta_post_types', 'gdrts__generate_entry_meta_post_types' );
 add_filter( 'generate_footer_meta_post_types', 'gdrts__generate_entry_meta_post_types' );
 function gdrts__generate_entry_meta_post_types( $types ) {
 	$types[] = 'product';

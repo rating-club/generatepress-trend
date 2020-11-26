@@ -12,20 +12,23 @@
 .widget-gdssh_networks_profiles .widget-title {
     text-align: center;
 }
+
 /* Widgets */
 
 /* Additional Widgets Styling */
 .gdrts-rating-list ol li.gdrts-rating-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px dashed #dedede;
+    border-bottom: 1px dashed #DEDEDE;
 }
+
 /* Additional Widgets Styling */
 
 /* Breadcrumbs Styling */
 .gdcub-generatepress-wrapper {
     background: #FFF;
 }
+
 /* Breadcrumbs Styling */
 
 /* Single Product Styling */
@@ -36,6 +39,7 @@ body.single-product article.type-product .trend-rating {
 body.single-product article.type-product .gdrts-rating-block {
     margin: 2em 1em 0 0;
 }
+
 /* Single Product Styling */
 
 /* Archive Products Styling */
@@ -66,4 +70,5 @@ body.post-type-archive-product article .entry-summary {
 body.post-type-archive-product article footer.entry-meta {
     margin-top: 5px;
 }
+
 /* Archive Products Styling */
